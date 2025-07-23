@@ -23,7 +23,7 @@ You can enable the connector in one of the following ways:
 
 * Run as a Python process: simply configure the `config.yml` file with the appropriate values and launch the connector directly.
 
-* Run in Docker: use the OpenCTI docker image `anyrun/opencti-connector-anyrun-task:latest`
+* Run in Docker: use the OpenCTI docker image `anyrun/opencti-connector-anyrun-ti-lookup:latest`
 
 ANY.RUN provide a sample `docker-compose.yml` file, which can be used as a standalone deployment or integrated into OpenCTI’s main `docker-compose.yml`.
 
