@@ -8,9 +8,8 @@ ______________________________________________________________________
 
 # ANY.RUN connectors for OpenCTI
 
-The repository contains the latest versions of the following connectors for the OpenCTI:
-* [ANY.RUN Sandbox](https://app.any.run/?utm_source=sdk_projects&utm_medium=integration&utm_campaign=appanyrun) 
-* [ANY.RUN Threat Intelligence Feeds](https://intelligence.any.run/feeds/?utm_source=sdk_projects&utm_medium=integration&utm_campaign=intelligence-feeds)
-* [ANY.RUN Threat Intelligence Lookup](https://intelligence.any.run/?utm_source=sdk_projects&utm_medium=integration&utm_campaign=intelligence-lookup)
+This repository provides integrations of the OpenCTI threat intelligence platform with three key components: the ANY.RUN interactive sandbox, Threat Intelligence (TI) lookups, and structured TI feeds. The centerpiece is the ANY.RUN integration, which enables automated submission of files and URLs from OpenCTI for dynamic malware analysis. It retrieves detailed sandbox reports—including network activity, dropped files, and MITRE ATT&CK techniques—that enrich observables in OpenCTI. These insights help analysts rapidly assess threats and correlate malicious behaviors across incidents.   
+The TI lookup module allows querying external sources for additional context on indicators of compromise (IOCs), while the TI feeds module supports scheduled ingestion of threat data from trusted providers. Together, these integrations extend OpenCTI’s analytical and data enrichment capabilities.  
+The connectors are Docker-ready, API-driven, and easy to configure. By combining real-time sandbox intelligence with external data sources, this solution strengthens threat detection, investigation, and response workflows within the OpenCTI environment.  
 
 For more detailed information, please use the README files in the subfolders.
