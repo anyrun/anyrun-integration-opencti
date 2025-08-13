@@ -6,37 +6,50 @@
 
 ______________________________________________________________________
 
-# ANY.RUN Sandbox connector for OpenCTI
+## ANY.RUN Interactive Sandbox connector for OpenCTI 
 
-The ANY.RUN Sandbox connector enables OpenCTI users to analyze observables such as artifacts and URLs in the cloud sandbox, enriching them with verdicts. This helps security teams detect and defend against emerging, evolving, and persistent cyber threats.
+[ANY.RUN's Interactive Sandbox](https://any.run/features/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_sandbox&utm_content=linktosandboxlanding) is a cloud-based service that provides SOC teams with a simple way to analyze cyber threats, enabling rapid threat intelligence and deep analysis in a secure environment.  
 
-To use this integration, ensure that you have an active [ANY.RUN Sandbox license](https://any.run/demo/?utm_source=opencti_marketplace&utm_medium=integration&utm_campaign=opencti_form).
+### Connector’s functionality 
 
-## Installation
+The connector for the Interactive Sandbox enables OpenCTI users to quickly analyze and identify observables, such as artifacts and URLs in the cloud sandbox. 
 
-The ANY.RUN Threat Intelligence Lookup connector for OpenCTI is a standalone Python service that requires access to both the OpenCTI platform and RabbitMQ.
+* Perform real-time analysis to make fast decisions
+* Get detailed reports that include insights into network activity, dropped files, and MITRE ATT&CK techniques
+* Enrich observables in OpenCTI 
 
-RabbitMQ credentials and connection parameters are provided automatically by the OpenCTI API, based on the platform’s configuration.
+### Key SOC benefits 
 
-You can enable the connector in one of the following ways:
+As a result of the integration of ANY.RUN’s Interactive Sandbox with OpenCTI, you’ll achieve: 
 
-* Run as a Python process: simply configure the `config.yml` file with the appropriate values and launch the connector directly.
+* Streamlined Triage and Detection: Automate threat analysis to receive actionable verdicts and reports to prioritize incidents effectively.
+* Shorter MTTD and MTTR: Lower response times by gaining a full understanding of the threat’s behavior in seconds.
+* Higher Detection Rates: In-depth insights and advanced detection mechanisms provide deep visibility into complex threats.
+* Minimized Workload: Reduce analyst workload by automating repetitive tasks.
+* Stronger Security: Use sandbox reports and related data to refine rules, update playbooks, and train threat detection models. 
 
-* Run in Docker: use the OpenCTI docker image `anyrun/opencti-connector-anyrun-task:latest`
+### Installation 
 
-ANY.RUN provide a sample `docker-compose.yml` file, which can be used as a standalone deployment or integrated into OpenCTI’s main `docker-compose.yml`.
+To use this integration, make sure that you have an active [ANY.RUN Sandbox license](https://app.any.run/plans/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_sandbox&utm_content=linktopricing).
+ANY.RUN connector for OpenCTI is a standalone Python service that requires access to both the OpenCTI platform and RabbitMQ.
+RabbitMQ credentials and connection parameters are provided automatically by the OpenCTI API, based on the platform’s configuration. 
 
-### Requirements
+You can enable the connector in one of the following ways: 
 
-- OpenCTI Platform >= 6.7.4
-- ANY.RUN Sandbox license
+* Run as a Python process: simply configure the config.yml file with the appropriate values and launch the connector directly.
+* Run in Docker: use the OpenCTI docker image anyrun/opencti-connector-anyrun-task:latest 
 
-### Generate API key
+ANY.RUN provides a sample docker-compose.yml file, which can be used as a standalone deployment or integrated into OpenCTI’s main docker-compose.yml. 
 
-* Follow [ANY.RUN](https://app.any.run/)
-* [1] Profile > [2] API and Limits > [3] Generate > [4] Copy
+### Requirements 
 
-![ANY.RUN Generate API KEY](static/ANYRUN_API_TOKEN.png)
+* OpenCTI Platform >= 6.7.4
+* ANY.RUN Sandbox license 
+
+### Generate API key 
+
+* Go to [ANY.RUN Sandbox](https://app.any.run/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_sandbox&utm_content=linktoservice)
+* Click Profile > API and Limits > Generate > Copy 
 
 ### Configuration
 
@@ -101,4 +114,6 @@ The connector can be configured with the following variables:
 | `obj_ext_cmd`             | `ANYRUN_OBJ_EXT_CMD`                 | No       | Optional command-line arguments for the analyzed object. Use an empty string ("") to apply the default behavior. |
 
 ## Support
-This is an ANY.RUN supported connector. For support please contact <anyrun-integrations@any.run>
+This is an ANY.RUN’s supported connector. You can write to us for help with integration via [support@any.run](mailto:support@any.run). 
+
+Contact us for a quote or demo via [this form](https://app.any.run/contact-us/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_sandbox&utm_content=linktocontactus). 

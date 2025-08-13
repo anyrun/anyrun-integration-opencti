@@ -7,31 +7,44 @@
 ______________________________________________________________________
 
 
-# ANY.RUN Threat Intelligence Lookup connector for OpenCTI 
+## ANY.RUN Threat Intelligence Lookup connector for OpenCTI 
 
-The ANY.RUN Threat Intelligence Lookup connector enables OpenCTI users to enrich observables such as file hashes, domain names, hostnames, IP addresses, and URLs. This enrichment helps security teams proactively detect and defend against emerging, evolving, and persistent cyber threats.
+ANY.RUN’s [Threat Intelligence Lookup](https://any.run/threat-intelligence-lookup/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_lookup&utm_content=linktolookuplanding) (TI Lookup) is a service that allows you to browse IOCs and related threat data to simplify and enrich cyberattack investigations. 
 
-To use this integration, ensure that you have an active [ANY.RUN TI Lookup license](https://any.run/demo/?utm_source=opencti_marketplace&utm_medium=integration&utm_campaign=opencti_form).
+### Connector’s functionality 
 
-## Installation
+The Threat Intelligence Lookup сonnector enables OpenCTI users to browse various types of IOCs, from IPs and domains to URLs and hashes. 
 
-The ANY.RUN Threat Intelligence Lookup connector for OpenCTI is a standalone Python service that requires access to both the OpenCTI platform and RabbitMQ.
+* Browse indicators in TI Lookup without leaving OpenCTI
+* Receive data related to your query to gain actionable insights
+* Use them for incident response, to create new rules, train models, update playbooks, etc. 
 
-RabbitMQ credentials and connection parameters are provided automatically by the OpenCTI API, based on the platform’s configuration.
+### Key SOC benefits 
 
-You can enable the connector in one of the following ways:
+As a result of integration of TI Lookup with OpenCTI, you’ll achieve: 
 
-* Run as a Python process: simply configure the `config.yml` file with the appropriate values and launch the connector directly.
+* Early Threat Detection: Correlate IOCs to identify incidents before they escalate.
+* Proactive Defense Enrichment: Collect indicators from attacks on other companies to update your detection systems.
+* Reduced MTTR and Increased Detection Rate: Access to rich threat context enables SOCs to make informed decisions fast. 
 
-* Run in Docker: use the OpenCTI docker image `anyrun/opencti-connector-anyrun-ti-lookup:latest`
+ 
+### Installation 
 
-ANY.RUN provide a sample `docker-compose.yml` file, which can be used as a standalone deployment or integrated into OpenCTI’s main `docker-compose.yml`.
+To use this integration, make sure that you have an active [ANY.RUN TI Lookup license](https://intelligence.any.run/plans/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_lookup&utm_content=linktotiplans).
+ANY.RUN TI Lookup connector for OpenCTI is a standalone Python service that requires access to both the OpenCTI platform and RabbitMQ.
+RabbitMQ credentials and connection parameters are provided automatically by the OpenCTI API, based on the platform’s configuration. 
 
-**Note**:
+You can enable the connector in one of the following ways: 
 
-- If you deploy the connector independently, make sure it can reach RabbitMQ on the port defined in your OpenCTI configuration.
-- If you're experiencing issues or require an immediate update, ANY.RUN can provide an updated Docker image upon request.
-Please contact our support team at <anyrun-integrations@any.run>.
+* Run as a Python process: simply configure the config.yml file with the appropriate values and launch the connector directly.
+* Run in Docker: use the OpenCTI docker image anyrun/opencti-connector-anyrun-ti-lookup:latest 
+
+ANY.RUN provides a sample docker-compose.yml file, which can be used as a standalone deployment or integrated into OpenCTI’s main docker-compose.yml. 
+
+Note: 
+
+* If you deploy the connector independently, make sure it can reach RabbitMQ on the port defined in your OpenCTI configuration.
+* If you're experiencing issues or require an immediate update, ANY.RUN can provide an updated Docker image upon request. Please contact our support team at support@any.run. 
 
 ### Requirements
 
@@ -40,8 +53,8 @@ Please contact our support team at <anyrun-integrations@any.run>.
 
 ### Generate API key
 
-* Follow [ANY.RUN](https://app.any.run/)
-* [1] Profile > [2] API and Limits > [3] Generate > [4] Copy
+* Go to [ANY.RUN Sandbox](https://app.any.run/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_sandbox&utm_content=linktoservice)
+* Click Profile > API and Limits > Generate > Copy 
 
 ![ANY.RUN Generate API KEY](static/ANYRUN_API_TOKEN.png)
 
@@ -66,4 +79,6 @@ The connector can be configured with the following variables:
 | `lookup_depth`               | `ANYRUN_LOOKUP_DEPTH`                   | Yes       | Specify the number of days from the current date for which you want to lookup.                                                                                           |
 
 ## Support
-This is an ANY.RUN supported connector. For support please contact <anyrun-integrations@any.run>
+This is an ANY.RUN’s supported connector. You can write to us for help with integration via [support@any.run](mailto:support@any.run). 
+
+Contact us for a quote or demo via [this form](https://app.any.run/contact-us/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_lookup&utm_content=linktocontactus ). 

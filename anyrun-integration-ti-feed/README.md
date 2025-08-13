@@ -6,39 +6,54 @@
 
 ______________________________________________________________________
 
-# ANY.RUN Threat Intelligence Feed connector for OpenCTI 
+## ANY.RUN Threat Intelligence Feeds connector for OpenCTI 
 
-The ANY.RUN Threat Intelligence Feed connector provides OpenCTI users with a continuously updated stream of fresh, accurate indicators of compromise, including malicious IPs, URLs, and domains. This enables security teams to proactively defend against emerging, evolving, and persistent cyber threats.
-To use the integration, ensure you have an active [ANY.RUN TI Feed subscription](https://any.run/demo/?utm_source=opencti_marketplace&utm_medium=integration&utm_campaign=opencti_form).
+ANY.RUN’s [Threat Intelligence Feeds](https://any.run/threat-intelligence-feeds/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_feeds&utm_content=linktofeedslanding) (TI Feeds) is a continuously updated source of fresh network-based Indicators of Compromise (IOCs): IPs, domains, and URLs. 
 
-## Installation
+The IOCs are extracted from real-time analyses done by experts from 15,000 companies in ANY.RUN’s Interactive Sandbox. 
 
-The ANY.RUN Threat Intelligence Lookup connector for OpenCTI is a standalone Python service that requires access to both the OpenCTI platform and RabbitMQ.
+### Connector’s functionality 
 
-RabbitMQ credentials and connection parameters are provided automatically by the OpenCTI API, based on the platform’s configuration.
+The connector for Threat Intelligence Feeds provides OpenCTI users with simple, automated access to uniquely sourced and accurate indicators of compromise. 
 
-You can enable the connector in one of the following ways:
+* Enrich OpenCTI artifacts with context from threat investigations
+* Get access to pre-processed IOCs with minimum false positives
+* Detect threats early and prevent attacks using high-quality indicators 
 
-* Run as a Python process: simply configure the `config.yml` file with the appropriate values and launch the connector directly.
+Key SOC benefits 
 
-* Run in Docker: use the ANY.RUN docker image `anyrun/opencti-connector-anyrun-feed:latest`
+Integrate TI Feeds with OpenCTI for an easy access to all the benefits it brings:  
 
-ANY.RUN provide a sample `docker-compose.yml` file, which can be used as a standalone deployment or integrated into OpenCTI’s main `docker-compose.yml`.
+* Expanded Coverage: ANY.RUN’s exclusive IOCs come from Memory Dumps, Suricata IDS, in-browser data, and internal threat categorization systems, increasing the chance of detection of the most evasive threats.
+* Reduced Workload: The indicators are pre-processed to avoid false positives and ready to be used for malware analysis or incident investigation.
+* Informed Response: Rich metadata provided for IOCs gives you the context for in-depth threat investigations and faster response.  
 
-**Note**:
+### Installation 
 
-- If you deploy the connector independently, make sure it can reach RabbitMQ on the port defined in your OpenCTI configuration.
-- If you're experiencing issues or require an immediate update, ANY.RUN can provide an updated Docker image upon request.
-Please contact our support team at <anyrun-integrations@any.run>.
+To use the integration, ensure you have an active [ANY.RUN TI Feeds subscription](https://intelligence.any.run/plans/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_feeds&utm_content=linktotiplans ).
+ANY.RUN TI Feeds connector for OpenCTI is a standalone Python service that requires access to both the OpenCTI platform and RabbitMQ.
+RabbitMQ credentials and connection parameters are provided automatically by the OpenCTI API, based on the platform’s configuration. 
 
-### Requirements
+You can enable the connector in one of the following ways: 
 
-- OpenCTI Platform >= 6.7.4
-- ANY.RUN TI Feed subscription
+* Run as a Python process: simply configure the config.yml file with the appropriate values and launch the connector directly.
+* Run in Docker: use the ANY.RUN docker image anyrun/opencti-connector-anyrun-feed:latest 
 
-## Generate Basic Authentication token
+ANY.RUN provides a sample docker-compose.yml file, which can be used as a standalone deployment or integrated into OpenCTI’s main docker-compose.yml. 
 
-To obtain your Basic Authentication token, please contact your ANY.RUN account manager directly or fill out the request [form](https://any.run/demo/?utm_source=opencti_marketplace&utm_medium=integration&utm_campaign=opencti_form).
+Note: 
+
+* If you deploy the connector independently, make sure it can reach RabbitMQ on the port defined in your OpenCTI configuration.
+* If you're experiencing issues or require an immediate update, ANY.RUN can provide an updated Docker image upon request. Please contact our support team at support@any.run. 
+
+### Requirements 
+
+* OpenCTI Platform >= 6.7.4
+* ANY.RUN TI Feeds subscription  
+
+### Generate Basic Authentication token 
+
+To obtain your Basic Authentication token, please contact your ANY.RUN account manager directly or [fill out the request form](https://app.any.run/contact-us/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_feeds&utm_content=linktocontactus). 
 
 ### Configuration
 
@@ -59,4 +74,6 @@ The connector can be configured with the following variables:
 | `feed_fetch_depth`               | `ANYRUN_FEED_FETCH_DEPTH`       | Yes       | Specify feed fetch depth in days                                                                                                                                                          |
 
 ## Support
-This is an ANY.RUN supported connector. For support please contact <anyrun-integrations@any.run>
+This is an ANY.RUN’s supported connector. You can write to us for help with integration via [support@any.run](mailto:support@any.run). 
+
+Contact us for a quote or demo via [this form](https://app.any.run/contact-us/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_feeds&utm_content=linktocontactus). 
