@@ -11,6 +11,6 @@ connector:
   update_existing_data: false # Update data already ingested into the platform.
 
 anyrun:
-  token: 'ChangeMe' # ANY.RUN TI Feeds Basic token. See "Generate Basic auth token" section in the README file. Example: Basic askAs...s31==
+  api_key: 'ChangeMe' # ANY.RUN TI Feeds API key. See "Generate your API key" section in the README file. Example: WmNfqnpo...2Sjon7mtvm8e
   feed_fetch_interval: 120 # Specify feed fetch interval in minutes.
   feed_fetch_depth: 90 # Specify feed fetch depth in days.

@@ -30,7 +30,7 @@ class AnyrunFeed:
         self._helper.log_info(f'Starting {self._helper.connect_name} connector.')
 
         with FeedsConnector(
-            self._config.anyrun_token,
+            self._config.anyrun_api_key,
             enable_requests=True,
             integration=self._config.VERSION
         ) as connector:

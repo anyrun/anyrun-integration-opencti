@@ -51,27 +51,29 @@ Note:
 * OpenCTI Platform >= 6.7.4
 * ANY.RUN TI Feeds subscription  
 
-### Generate Basic Authentication token 
+### Generate your API key 
 
-To obtain your Basic Authentication token, please contact your ANY.RUN account manager directly or [fill out the request form](https://app.any.run/contact-us/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_feeds&utm_content=linktocontactus). 
+Please use ANY.RUN’s API key without a prefix. Prefixed API keys and Basic Authentication for TI Feeds won’t be supported in future releases.   
+For assistance or access to ANY.RUN’s services, please reach out to our [sales team](https://any.run/enterprise/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_feeds&utm_content=linktoenterprise#contact-sales).
+---
 
 ### Configuration
 
 The connector can be configured with the following variables:  
 
 
-| Parameter                        | Docker envvar         | Mandatory | Description                                                                                                                                                                   |
-|----------------------------------|-----------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `opencti_url`                    | `OPENCTI_URL`         | Yes       | The URL of the OpenCTI platform. Note that final `/` should be avoided. Example value: `http://opencti:8080`                                                                  |
-| `opencti_token`                  | `OPENCTI_TOKEN`       | Yes       | The default admin token configured in the OpenCTI platform parameters file. We recommend setting up a separate ``OPENCTI_TOKEN`` named **ANY.RUN** to identify the work of our integrations.                                                                                                  |
-| `connector_id`                   | `CONNECTOR_ID`        | Yes       | A valid arbitrary `UUIDv4` that must be unique for this connector.                                                                                                            |
-| `connector_name`                 | `CONNECTOR_NAME`      | Yes       | A connector name to be shown in OpenCTI.                                                                                                                                      |
-| `connector_scope`                | `CONNECTOR_SCOPE`     | Yes       | Supported scope. E. g., `text/html`.                                                                                                                                          |
-| `connector_log_level`            | `CONNECTOR_LOG_LEVEL` | Yes       | The log level for this connector, could be `debug`, `info`, `warn` or `error` (less verbose).                                                                                 |
-| `connector_update_existing_data` | `CONNECTOR_UPDATE_EXISTING_DATA` | Yes       | Update data already ingested into the platform. |
-| `token`                          | `ANYRUN_BASIC_TOKEN`     | Yes       | ANY.RUN TI Feeds Basic token. See "Generate Basic Authentication token" section in the README file. Example: Basic askAs...s31==                                                                 |
-| `feed_fetch_interval`            | `ANYRUN_FEED_FETCH_INTERVAL`       | Yes       | Specify feed fetch interval in minutes                                                                                                                                                           |
-| `feed_fetch_depth`               | `ANYRUN_FEED_FETCH_DEPTH`       | Yes       | Specify feed fetch depth in days                                                                                                                                                          |
+| Parameter                        | Docker envvar                    | Mandatory | Description                                                                                                                                                                                 |
+|----------------------------------|----------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `opencti_url`                    | `OPENCTI_URL`                    | Yes       | The URL of the OpenCTI platform. Note that final `/` should be avoided. Example value: `http://opencti:8080`                                                                                |
+| `opencti_token`                  | `OPENCTI_TOKEN`                  | Yes       | The default admin token configured in the OpenCTI platform parameters file. We recommend setting up a separate ``OPENCTI_TOKEN`` named **ANY.RUN** to identify the work of our integrations. |
+| `connector_id`                   | `CONNECTOR_ID`                   | Yes       | A valid arbitrary `UUIDv4` that must be unique for this connector.                                                                                                                          |
+| `connector_name`                 | `CONNECTOR_NAME`                 | Yes       | A connector name to be shown in OpenCTI.                                                                                                                                                    |
+| `connector_scope`                | `CONNECTOR_SCOPE`                | Yes       | Supported scope. E. g., `text/html`.                                                                                                                                                        |
+| `connector_log_level`            | `CONNECTOR_LOG_LEVEL`            | Yes       | The log level for this connector, could be `debug`, `info`, `warn` or `error` (less verbose).                                                                                               |
+| `connector_update_existing_data` | `CONNECTOR_UPDATE_EXISTING_DATA` | Yes       | Update data already ingested into the platform.                                                                                                                                             |
+| `api_key`                        | `ANYRUN_API_KEY`                 | Yes       | ANY.RUN TI Feeds API key. See "Generate your API key" section in the README file. Example: WmNfqnpo...2Sjon7mtvm8e                                                             |
+| `feed_fetch_interval`            | `ANYRUN_FEED_FETCH_INTERVAL`     | Yes       | Specify feed fetch interval in minutes                                                                                                                                                      |
+| `feed_fetch_depth`               | `ANYRUN_FEED_FETCH_DEPTH`        | Yes       | Specify feed fetch depth in days                                                                                                                                                            |
 
 ## Support
 This is an ANY.RUN’s supported connector. You can write to us for help with integration via [support@any.run](mailto:support@any.run). 

@@ -19,7 +19,7 @@ class Config:
 
     def __init__(self) -> None:
         self._create_base_config()
-        self.anyrun_token = f"{get_config_variable('ANYRUN_BASIC_TOKEN', ['anyrun', 'token'], config)}"
+        self.anyrun_api_key = f"{get_config_variable('ANYRUN_API_KEY', ['anyrun', 'token'], config)}"
 
     def _create_base_config(self) -> None:
         """

@@ -16,7 +16,7 @@ services:
       - CONNECTOR_UPDATE_EXISTING_DATA=false # Update data already ingested into the platform.
 
       # ANY.RUN base settings.
-      - ANYRUN_BASIC_TOKEN=ChangeMe # ANY.RUN TI Feeds Basic token. See "Generate Basic auth token" section in the README file. Example: Basic askAs...s31==
+      - ANYRUN_API_KEY=ChangeMe # ANY.RUN TI Feeds API key. See "Generate your API key" section in the README file.
       - ANYRUN_FEED_FETCH_INTERVAL=120 # Specify feed fetch interval in minutes.
       - ANYRUN_FEED_FETCH_DEPTH=90 # Specify feed fetch depth in days.
     restart: always
