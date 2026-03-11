@@ -114,6 +114,6 @@ The connector can be configured with the following variables:
 | `obj_ext_cmd`             | `ANYRUN_OBJ_EXT_CMD`                 | No       | Optional command-line arguments for the analyzed object. Use an empty string ("") to apply the default behavior. |
 
 ## Support
-This is an ANY.RUN’s supported connector. You can write to us for help with integration via [support@any.run](mailto:support@any.run). 
+This is an ANY.RUN’s supported connector. You can write to us for help with integration via [techsupport@any.run](mailto:techsupport@any.run) . 
 
 Contact us for a quote or demo via [this form](https://app.any.run/contact-us/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_sandbox&utm_content=linktocontactus). 

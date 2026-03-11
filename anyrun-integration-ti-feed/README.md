@@ -44,7 +44,7 @@ ANY.RUN provides a sample docker-compose.yml file, which can be used as a standa
 Note: 
 
 * If you deploy the connector independently, make sure it can reach RabbitMQ on the port defined in your OpenCTI configuration.
-* If you're experiencing issues or require an immediate update, ANY.RUN can provide an updated Docker image upon request. Please contact our support team at support@any.run. 
+* If you're experiencing issues or require an immediate update, ANY.RUN can provide an updated Docker image upon request. Please contact our support team at [techsupport@any.run](mailto:techsupport@any.run) . 
 
 ### Requirements 
 
@@ -76,6 +76,6 @@ The connector can be configured with the following variables:
 | `feed_fetch_depth`               | `ANYRUN_FEED_FETCH_DEPTH`        | Yes       | Specify feed fetch depth in days                                                                                                                                                            |
 
 ## Support
-This is an ANY.RUN’s supported connector. You can write to us for help with integration via [support@any.run](mailto:support@any.run). 
+This is an ANY.RUN’s supported connector. You can write to us for help with integration via [techsupport@any.run](mailto:techsupport@any.run) . 
 
 Contact us for a quote or demo via [this form](https://app.any.run/contact-us/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=opencti_feeds&utm_content=linktocontactus). 

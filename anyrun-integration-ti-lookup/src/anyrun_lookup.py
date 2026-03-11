@@ -241,9 +241,9 @@ class AnyRunTILookup:
         :return: TI Lookup summary
         """
         with LookupConnector(
-                self._config.anyrun_token,
-                integration=self._config.VERSION,
-                enable_requests=True
+            self._config.anyrun_token,
+            integration=self._config.VERSION,
+            enable_requests=True
         ) as connector:
             connector.check_authorization()
 
